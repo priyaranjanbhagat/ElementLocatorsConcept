@@ -11,8 +11,10 @@ public class CSSSelector {
 	public static void main(String[] args) {
 
 		/*
-		 * CSS Selector 1. Using Class name -> tagName.className -> button.signInBtn 2.
-		 * Using ID -> tagName#id -> input#inputUsername 3. TagName[attribute='value']
+		 * CSS Selector 
+		 * 1. Using Class name -> tagName.className -> button.signInBtn 
+		 * 2. Using ID -> tagName#id -> input#inputUsername 
+		 * 3. TagName[attribute='value']
 		 */
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -27,7 +29,8 @@ public class CSSSelector {
 
 		String errorText = driver.findElement(By.cssSelector("p.error")).getText();
 		System.out.println("Error text is : " + errorText );
-
+		
+		driver.findElement(By.linkText("Forgot your password?")).click();
 		driver.close();
 
 	}
